@@ -1,11 +1,13 @@
-.Navbar{
+body{
+    background-color: rgb(255, 0, 0);
+}
+#navbar{
     background-color: azure;
 }
-.header
+#header
 {
     background-color: antiquewhite;
 }
-.footer{
+#footer{
     background-color: aqua;
-
 }
