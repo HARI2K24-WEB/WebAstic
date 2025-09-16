@@ -1,13 +1,54 @@
-body{
-    background-color: rgb(255, 0, 0);
+
+
+/* Body */
+body {
+  background-color: #e9b245;
+    margin: 0;
+ }
+
+/* Navbar */
+
+nav {
+  font-size: larger;
+
+  background: #c38c1d;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
 }
-#navbar{
-    background-color: azure;
+.logo{
+  font-size: xx-large;
+    font-style: italic;
 }
-#header
-{
-    background-color: antiquewhite;
+nav a{
+  align-items: center;
+  padding: 2rem;
+  color:white;
+  text-decoration: none;
 }
-#footer{
-    background-color: aqua;
+nav a:hover { text-decoration: none;  color:rgb(160, 151, 151); }
+
+/* Hero */
+header {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+header p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+
+
+/* Sections */
+section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
+section h2 { margin-bottom: 1rem; }
+
+/* Services */
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
 }
