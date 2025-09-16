@@ -1,49 +1,139 @@
-
-
 /* Body */
 body {
   background-color: #e9b245;
-    margin: 0;
- }
+  margin: 0;
+}
 
 /* Navbar */
 
-nav {
+nav.navbar {
   font-size: larger;
-
   background: #c38c1d;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
-.logo{
+
+#logo {
   font-size: xx-large;
-    font-style: italic;
-}
-nav a{
-  align-items: center;
-  padding: 2rem;
-  color:white;
+  font-style: italic;
+  color: white;
   text-decoration: none;
 }
-nav a:hover { text-decoration: none;  color:rgb(160, 151, 151); }
+
+nav a {
+  align-items: center;
+  padding: 3rem;
+  color: white !important;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: rgb(160, 151, 151) !important;
+}
+
+.btn-color {
+  background-color: #26cab4 !important;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+}
 
 /* Hero */
 header {
-  background: #f4f4f4;
+  min-height: 100vh;
+  background: #e2e0dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 0 1rem;     
 }
-header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-header p { font-size: 1.2rem; margin-bottom: 1.5rem; }
 
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-/* Sections */
-section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
-section h2 { margin-bottom: 1rem; }
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+#logo1 {
+  font-style: italic;
+  color: #c38c1d; 
+}
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
 
 /* Services */
+section {
+  min-height: 80vh;
+  margin: auto;
+  justify-content: left;  
+  align-items: left;      
+  text-align: left;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+}
+
+#aboutus1 {
+  color: #c38c1d; 
+}
+
+#aboutus2 {
+  width: 50%;              /* Half width on large screens */
+  text-align: justify; 
+  margin: 0 auto;          /* Center horizontally */
+  line-height: 1.6; 
+  padding: 30px;
+  font-style: inherit;
+  font-size: 20px;
+}
+
+/* 📱 Tablet & Mobile Responsive */
+@media (max-width: 992px) {
+  #aboutus2 {
+    width: 70%;            /* Tablet: a bit wider */
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  #aboutus2 {
+    width: 100%;           /* Mobile: full width */
+    font-size: 16px;
+    padding: 15px;
+    text-align: left;      /* Optional: left-align for mobile */
+  }
+}
+
+/* Services */
+ #services{
+  background-color: #ffffff;
+  min-height: 75vh;
+  margin: auto;
+ }
+
+/* Services*/
 
 /* Footer */
 footer {

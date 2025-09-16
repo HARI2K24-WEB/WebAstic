@@ -1,91 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WebAstic</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav>
-  <div class="logo">WebAstic</div>
-  <div class="menu">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#about">Blog</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar fixed-top ">
+  <div class="container-fluid">
+    <a id="logo" class="navbar-brand" href="#">WebAstic</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto text-center">  <!-- center items -->
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About us </a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-color btn-lg rounded-pill ms-lg-3" href="#services"><i class="bi bi-telephone-fill"></i></a>
+    </div>
   </div>
 </nav>
 
-<!-- Hero Section -->
-<header id="home">
-  <h1>Welcome to WebAstic</h1>
-  <p>We provide Web solutions to grow your business.</p>
-  <a class="btn btn-warning" href="#services" class="btn"> Build Together</a>
-</header>
 
-<!-- About Section -->
-<section id="about">
-  <h2>About Us</h2>
+  <!-- Hero Section -->
+  <header>
+    <h1>Welcome To <span id="logo1">WebAstic !</span> <i class="bi bi-globe"></i> </h1> 
+    <p>We provide Web solutions to grow your business.</p>
+    <a class="btn btn-warning rounded-pill" href="#services" class="btn"> Build Together</a>
+  </header>
+
+  <!-- About Section -->
+  <section class="px-5 py-5" id="about">
+    <h1>About <span id="aboutus1">WebAstic</span> - Crafting <br> Innovative Web Solutions</h1>
+
+    <p id="aboutus2" class="m-3"> At WebAstic, we are passionate creators and problem solvers dedicated to delivering outstanding digital experiences.
+      Founded with a vision to combine technology and aesthetics, our team specializes in providing cutting-edge web development services that help businesses thrive online. 
+       From responsive website design to robust web applications and reliable hosting, we offer customized solutions that cater to your unique needs. 
+       Our commitment to quality, creativity, and client satisfaction makes us your trusted partner in achieving digital success. 
+       Connect with WebAstic today and let’s bring your web vision to life!</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-1">
+    <h2 class="m-5 d-flex gap-4 flex-wrap justify-content-center">Our Services</h2>
+    <div style="align-items: right; gap: 20px; margin: 60px; cursor: pointer;">
+
+      <div href="#" class="d-flex gap-4 flex-wrap justify-content-center">
+        <div class="card  text-center" style="width: 18rem; height: 23rem;">
+          <div class="card-body">
+             <img src="Photos/card1.jpg" style="width: 200px; height: 200px;">
+            <h5 class="card-title" >WEB DEVELOPMENT</h5>
+            <p class="card-text">We build modern and responsive websites.</p>
+            <a href="#" class="btn btn-primary">Develop</a>
+          </div>
+        </div>
+
+        <div href="#" class="card  text-center" style="width: 18rem; height: 23rem;">
+          <div class="card-body">
+             <img src="Photos/card3.jpg" style="width: 150px; height: 200px;">
+            <h5 class="card-title">DESIGN</h5>
+            <p class="card-text">We craft clean and creative <br> designs.</p>
+            <a href="#" class="btn btn-primary">Design</a>
+          </div>
+        </div>
+
+        <div hreef="#" class="card text-center" style="width: 18rem; height: 23rem;">
+          <div class="card-body">
+           <img src="Photos/card2.jpg" style="width: 200px; height: 200px;">
+            <h5 class="card-title">SERVER Management</h5>
+            <p class="card-text">We provide reliable and secure server solutions.</p>
+            <a href="#" class="btn btn-primary">Server</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <section id="contact" class="p-5">
+  <h2 class="text-center mb-4">Contact Us</h2>
+  <div class="container">
+    <form class="p-4 shadow rounded bg-light" style="max-width: 600px; margin: auto;">
+      <!-- Nmae and NUMber--> 
+       <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required>
+        </div>
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone Number" required>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Your Email" required>
+      </div>
+
+      <!-- Subject -->
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="subject" placeholder="Grow My Business Online">
+      </div>
+
+      <!-- Message -->
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Type your message..."></textarea>
+      </div>
+
+      <!-- Button -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary px-4">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p> ©️ 2025 WebAstic. All rights reserved.</p>
+  </footer>
   
-</section>
-
-<!-- Services Section -->
-<section id="services">
-  <h2>Our Services</h2>\
-<div style="display: flex; gap: 20px; justify-content: center; cursor: pointer;">
-
- <div  href="#" class="d-flex justify-content-center gap-4 flex-wrap">
-  <div class="card  text-center" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">WEB DEVELOPMENT</h5>
-      <p class="card-text">We build modern and responsive websites.</p>
-      <a href="#" class="btn btn-primary">Develop</a>
-    </div>
-  </div>
-
-  <div href="#" class="card  text-center" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">DESIGN</h5>
-      <p class="card-text">We craft clean and creative <br> designs.</p>
-      <a href="#" class="btn btn-primary">Design</a>
-    </div>
-  </div>
-
-  <div hreef="#" class="card text-center" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">SERVER Management</h5>
-      <p class="card-text">We provide reliable and secure server solutions.</p>
-      <a href="#" class="btn btn-primary">Server</a>
-    </div>
-  </div>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: info@yourcompany.com</p>
-  <p>Phone: +91 98765 43210</p>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 YourCompany. All rights reserved.</p>
-</footer>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </html>
