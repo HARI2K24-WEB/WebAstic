@@ -40,7 +40,7 @@ nav a:hover {
   font-weight: 600;
 }
 
-/* Hero */
+/* Hero start  */
 header {
   min-height: 100vh;
   background: #e2e0dc;
@@ -80,8 +80,9 @@ header p {
     padding: 0.7rem 1.2rem;
   }
 }
+/* Hero end */
 
-/* Services */
+/* about start*/
 section {
   min-height: 80vh;
   margin: auto;
@@ -99,19 +100,19 @@ section h2 {
 }
 
 #aboutus2 {
-  width: 50%;              /* Half width on large screens */
+  width: 50%;              
   text-align: justify; 
-  margin: 0 auto;          /* Center horizontally */
+  margin: 0 auto;         
   line-height: 1.6; 
   padding: 30px;
   font-style: inherit;
   font-size: 20px;
 }
 
-/* 📱 Tablet & Mobile Responsive */
+/* responce ajustment */
 @media (max-width: 992px) {
   #aboutus2 {
-    width: 70%;            /* Tablet: a bit wider */
+    width: 70%;          
     font-size: 18px;
     padding: 20px;
   }
@@ -119,26 +120,28 @@ section h2 {
 
 @media (max-width: 576px) {
   #aboutus2 {
-    width: 100%;           /* Mobile: full width */
+    width: 100%;         
     font-size: 16px;
     padding: 15px;
-    text-align: left;      /* Optional: left-align for mobile */
+    text-align: left; 
   }
 }
+/* about end*/
 
-/* Services */
+/* Services start*/
  #services{
   background-color: #ffffff;
   min-height: 75vh;
   margin: auto;
  }
 
-/* Services*/
+/* Services end */
 
-/* Footer */
+/* Footer start */
 footer {
-  background: #222;
+  background:#e9b245;
   color: #fff;
   text-align: center;
   padding: 1rem;
 }
+/* Footer end */
