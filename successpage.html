@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Sent</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: system-ui, sans-serif;
+        }
+
+        body {
+            background-color: #3a86ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Tick container */
+        .tick-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+            animation: popCircle 0.4s ease-out forwards;
+        }
+
+        /* Tick with left short, right long */
+        .tick-circle::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 50px;
+            border-right: 5px solid #90ee90;
+            border-bottom: 5px solid #90ee90;
+            transform: rotate(45deg) scale(0);
+            animation: drawTick 0.5s ease-out forwards 0.2s;
+        }
+
+        /* Tick draw animation */
+        @keyframes drawTick {
+            0% {
+                transform: rotate(45deg) scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                transform: rotate(45deg) scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: rotate(45deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Pop circle animation for celebration */
+        @keyframes popCircle {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            70% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Text */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            animation: textPop 0.5s ease-out 0.7s forwards;
+            opacity: 0;
+        }
+
+        p {
+            font-size: 1.1rem;
+            max-width: 300px;
+            line-height: 1.4;
+            opacity: 0;
+            animation: textPop 0.5s ease-out 0.9s forwards;
+        }
+
+        /* Text pop animation */
+        @keyframes textPop {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .tick-circle {
+                width: 80px;
+                height: 80px;
+            }
+
+            .tick-circle::after {
+                width: 20px;
+                height: 40px;
+                border-right-width: 4px;
+                border-bottom-width: 4px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tick-circle"></div>
+    <h1>Mail Sent Successfully!</h1>
+    <p>Thank you for reaching out! We’ll get back to you shortly.<br>“Building your vision, one click at a time.”</p>
+</body>
+
+</html>
