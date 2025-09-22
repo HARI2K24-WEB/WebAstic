@@ -7,6 +7,85 @@
                 navbar.classList.remove('navbar-scrolled');
             }
         });
+
+
+        // Create Particles
+    function createParticles() {
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 40;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Random properties
+            const size = Math.random() * 6 + 2;
+            const posX = Math.random() * 100;
+            const duration = Math.random() * 15 + 10;
+            const delay = Math.random() * 5;
+            
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${posX}%`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+            
+            particlesContainer.appendChild(particle);
+        }
+    }
+
+    window.addEventListener('load', createParticles);
+
+    tsParticles.load("particles", {
+    particles: {
+      number: { value: 50 },
+      color: { value: "#3a86ff" },
+      shape: { type: "circle" },
+      size: { value: 4 },
+      move: {
+        enable: true,
+        direction: "bottom", // <-- Top to bottom
+        speed: 2,
+        straight: false
+      }
+    },
+    interactivity: {
+      events: { onhover: { enable: false }, onclick: { enable: false } }
+    }
+  });
+
+   particlesJS("particles", {
+    "particles": {
+      "number": {
+        "value": 50
+      },
+      "color": {
+        "value": "#3a86ff"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.7
+      },
+      "size": {
+        "value": 4
+      },
+      "move": {
+        "enable": true,
+        "speed": 2,
+        "direction": "bottom", // <-- Move top to bottom
+        "straight": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": false },
+        "onclick": { "enable": false }
+      }
+    }
+  });
         
         // Animation on scroll
         function animateOnScroll() {
