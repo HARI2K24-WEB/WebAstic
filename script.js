@@ -96,3 +96,6 @@
 
   }, 1000); // 3 seconds loader display
 });
+
+
+
