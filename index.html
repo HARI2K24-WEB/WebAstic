@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="photos/logo.png">
     <title>WebAstic-Web Solutions</title>
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
@@ -29,14 +31,16 @@
     </div>
 
     <!-- Navbar -->
+     
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">WebAstic</a>
+            <a class="navbar-brand" href="#">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <img src="photos/Name.png" alt="WebAstic Logo" style="height: 450px; width: auto; " ></a>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#home">Home</a>
@@ -105,18 +109,19 @@
                         </p>
                     </div>
                 </div>
-                
-                  <div class="col-md-6 col-lg-4 mb-4 animate">
+
+                <div class="col-md-6 col-lg-4 mb-4 animate">
                     <a href="portfolio.html" style="text-decoration: none; color: inherit;">
                         <div class="service-card">
-                        <div class="service-icon">
-                            <i class="bi bi-person-badge"></i>
-                        </div>
-                        <h3>PortFolio</h3>
-                        <p>Crafting clean, functional, and future-ready web experiences that speak louder than words.</p>
+                            <div class="service-icon">
+                                <i class="bi bi-person-badge"></i>
+                            </div>
+                            <h3>Port-Folio</h3>
+                            <p>Crafting clean, functional, and future-ready web experiences that speak louder than
+                                words.</p>
                         </div>
                     </a>
-                    </div>
+                </div>
 
 
                 <div class="col-md-6 col-lg-4 mb-4 animate">
@@ -342,54 +347,54 @@
             </div>
         </div>
     </footer>
-      <!-- EmailJS SDK -->
+    <!-- EmailJS SDK -->
     <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script>
         (function () {
             emailjs.init("H6qOyfhWn2pnUdab5");
         })();
 
-       // Contact form EmailJS
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contact-form');
-    if (!form) return;
+        // Contact form EmailJS
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-form');
+            if (!form) return;
 
-    const btn = form.querySelector('button[type="submit"]');
+            const btn = form.querySelector('button[type="submit"]');
 
-    // Check if page loaded after success redirect
-    if (sessionStorage.getItem('contactSent') === 'true') {
-        btn.innerText = "Send Message"; // Reset button text
-        btn.disabled = false;
-        sessionStorage.removeItem('contactSent'); // Clear flag
-    }
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        btn.disabled = true;
-        btn.innerText = "Sending... ⏳";
-
-        // Initialize EmailJS
-        emailjs.init("H6qOyfhWn2pnUdab5");
-
-        // Send email
-        emailjs.sendForm('service_o3j1djn', 'template_1og9rn6', this)
-            .then(() => {
-                this.reset();
-
-                // Set sessionStorage flag
-                sessionStorage.setItem('contactSent', 'true');
-
-                // Redirect to success page
-                window.location.href = 'successpage.html';
-            }, (err) => {
-                console.error('EmailJS error:', err);
-                alert('❌ Failed to send message. Try again.');
+            // Check if page loaded after success redirect
+            if (sessionStorage.getItem('contactSent') === 'true') {
+                btn.innerText = "Send Message"; // Reset button text
                 btn.disabled = false;
-                btn.innerText = "Send Message";
+                sessionStorage.removeItem('contactSent'); // Clear flag
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                btn.disabled = true;
+                btn.innerText = "Sending... ⏳";
+
+                // Initialize EmailJS
+                emailjs.init("H6qOyfhWn2pnUdab5");
+
+                // Send email
+                emailjs.sendForm('service_o3j1djn', 'template_1og9rn6', this)
+                    .then(() => {
+                        this.reset();
+
+                        // Set sessionStorage flag
+                        sessionStorage.setItem('contactSent', 'true');
+
+                        // Redirect to success page
+                        window.location.href = 'successpage.html';
+                    }, (err) => {
+                        console.error('EmailJS error:', err);
+                        alert('❌ Failed to send message. Try again.');
+                        btn.disabled = false;
+                        btn.innerText = "Send Message";
+                    });
             });
-    });
-});
+        });
 
     </script>
 
