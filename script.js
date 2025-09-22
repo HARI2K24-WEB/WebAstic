@@ -74,28 +74,40 @@
             });
         });
 
-  window.addEventListener('load', () => {
-  const loader = document.getElementById('loader');
+        window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
 
-  // Loader show every time page reload
-  setTimeout(() => {
-    // Fade out loader
-    loader.style.opacity = '0';
-    loader.style.transition = 'opacity 0.1s';
+        // Loader show every time page reload
+        setTimeout(() => {
+            // Fade out loader
+            loader.style.opacity = '0';
+            loader.style.transition = 'opacity 0.1s';
 
-    setTimeout(() => {
-      loader.style.display = 'none'; // Hide loader completely
+            setTimeout(() => {
+            loader.style.display = 'none'; // Hide loader completely
 
-      // Show main content with fade-in effect
-      document.querySelectorAll('body > *:not(#loader)').forEach(el => {
-        el.style.display = '';
-        el.classList.add('show-content'); // fade-in class from CSS
-      });
+            // Show main content with fade-in effect
+            document.querySelectorAll('body > *:not(#loader)').forEach(el => {
+                el.style.display = '';
+                el.classList.add('show-content'); // fade-in class from CSS
+            });
 
-    }, 500); // fade duration
+            }, 500); // fade duration
 
-  }, 1000); // 3 seconds loader display
-});
+        }, 1000); // 3 seconds loader display
+        });
 
+
+        const chatbotBtn = document.getElementById("chatbot-btn");
+        const chatbotBox = document.getElementById("chatbot-box");
+        const chatbotBody = document.getElementById("chatbot-body");
+        const chatbotInput = document.getElementById("chatbot-input");
+        const chatbotSend = document.getElementById("chatbot-send");
+
+        // Toggle chatbot open/close
+        chatbotBtn.addEventListener("click", () => {
+        chatbotBox.style.display =
+            chatbotBox.style.display === "flex" ? "none" : "flex";
+        });
 
 
