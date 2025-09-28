@@ -27,7 +27,9 @@ body {
     color: var(--dark-color);
     scroll-behavior: smooth;
     padding-top: 70px;
-    /* prevent navbar overlap */
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /* Custom Navbar Styles */
