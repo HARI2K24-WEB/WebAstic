@@ -2,11 +2,10 @@
     --primary-color: #3a86ff;
     --secondary-color: #8338ec;
     --accent-color: #ff006e;
-    --light-color: #f7f7f7;
+    --light-color: #030303;
     --dark-color: #212529;
     --primary-dark: #2667cc;
     --primary-light: #6ba3ff;
-
     --accent-color: #8338ec;
     --text-dark: #333;
     --text-light: #666;
@@ -34,7 +33,7 @@ body {
 /* Custom Navbar Styles */
 .navbar {
     
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgb(247, 247, 247);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     padding: 15px 0;
@@ -42,7 +41,7 @@ body {
 }
 
 .navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.98);
+    background-color:rgb(247, 247, 247);
     padding: 10px 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
