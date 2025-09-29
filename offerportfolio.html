@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-larger" sizes="192x192" href="photos/logo.png" >
+    <link rel="icon" type="image/x-larger" sizes="192x192" href="photos/logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Contact - Special Offer</title>
@@ -15,7 +16,7 @@
             min-height: 100vh;
             padding: 20px;
         }
-        
+
         .container-main {
             max-width: 1200px;
             margin: 30px auto;
@@ -24,18 +25,18 @@
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
-        
+
         .header {
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: white;
             padding: 30px;
             text-align: center;
         }
-        
+
         .content-wrapper {
             padding: 30px;
         }
-        
+
         .contact-form {
             border-left: 4px solid #6a11cb;
             padding: 25px;
@@ -44,7 +45,7 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             height: 100%;
         }
-        
+
         .offer-popup {
             background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
             color: white;
@@ -55,7 +56,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             height: 100%;
         }
-        
+
         .offer-badge {
             position: absolute;
             top: -2px;
@@ -68,16 +69,16 @@
             width: 80px;
             text-align: center;
             font-size: 14px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
-        
+
         .countdown {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin: 20px 0;
         }
-        
+
         .countdown-box {
             background: rgba(0, 0, 0, 0.3);
             border-radius: 8px;
@@ -85,18 +86,18 @@
             min-width: 70px;
             text-align: center;
         }
-        
+
         .countdown-value {
             font-size: 2rem;
             font-weight: bold;
             display: block;
         }
-        
+
         .countdown-label {
             font-size: 0.8rem;
             text-transform: uppercase;
         }
-        
+
         .btn-submit {
             background: linear-gradient(to right, #6a11cb, #2575fc);
             border: none;
@@ -109,30 +110,38 @@
             width: 100%;
             color: white;
         }
-        
+
         .btn-submit:hover {
             background: linear-gradient(to right, #4e0ca9, #1a62e0);
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
-        
+
         .pulse {
             animation: pulse 2s;
         }
-        
+
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
-        
+
         .section-title {
             position: relative;
             padding-bottom: 15px;
             margin-bottom: 25px;
             text-align: center;
         }
-        
+
         .section-title:after {
             content: "";
             position: absolute;
@@ -144,13 +153,13 @@
             background: linear-gradient(to right, #6a11cb, #2575fc);
             border-radius: 3px;
         }
-        
+
         .offer-title {
             position: relative;
             padding-bottom: 15px;
             margin-bottom: 20px;
         }
-        
+
         .offer-title:after {
             content: "";
             position: absolute;
@@ -162,19 +171,19 @@
             background: #ffc107;
             border-radius: 3px;
         }
-        
+
         .form-control {
             padding: 12px 15px;
             border: 1px solid #ddd;
             border-radius: 8px;
             transition: all 0.3s;
         }
-        
+
         .form-control:focus {
             border-color: #6a11cb;
             box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25);
         }
-        
+
         .success-message {
             display: none;
             background: #d4edda;
@@ -184,23 +193,24 @@
             margin-top: 20px;
             text-align: center;
         }
-        
+
         .form-check-input {
             width: 20px;
             height: 20px;
             margin-right: 10px;
         }
-        
+
         .form-check-label {
             font-size: 0.9rem;
         }
-        
+
         .terms-text {
             font-size: 0.85rem;
             margin-top: 5px;
         }
     </style>
 </head>
+
 <body>
     <div class="container-main">
         <!-- Header -->
@@ -219,36 +229,41 @@
                         <form id="contact-form">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                        required>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Your Email"
+                                        required>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <input type="text" name="subject" class="form-control" placeholder="Subject">
                             </div>
                             <div class="mb-3">
-                                <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                <textarea name="message" class="form-control" rows="5" placeholder="Your Message"
+                                    required></textarea>
                             </div>
-                            
+
                             <!-- Checkbox for claiming offer -->
                             <div class="form-check mb-3">
                                 <input class="form-check-input" type="checkbox" id="claim-offer" name="claim_offer">
                                 <label class="form-check-label" for="claim-offer">
                                     Yes, I want to claim the 50% discount offer!
                                 </label>
-                                <p class="terms-text text-muted">By checking this box, you agree to our terms and conditions regarding the special offer.</p>
+                                <p class="terms-text text-muted">By checking this box, you agree to our terms and
+                                    conditions regarding the special offer.</p>
                             </div>
-                            
+
                             <!-- Success Message (initially hidden) -->
                             <div class="success-message" id="success-message">
-                                <i class="bi bi-check-circle-fill"></i> Thank you for your message! We'll get back to you soon.
+                                <i class="bi bi-check-circle-fill"></i> Thank you for your message! We'll get back to
+                                you soon.
                             </div>
                         </form>
                     </div>
                 </div>
-                
+
                 <!-- Right Side - Offer Popup -->
                 <div class="col-lg-6 mb-4">
                     <div class="offer-popup">
@@ -257,8 +272,10 @@
                             <i class="bi bi-gift-fill" style="font-size: 3rem;"></i>
                         </div>
                         <h2 class="text-center mb-3 offer-title">Limited Time Offer!</h2>
-                        <p class="text-center">For the next 5 days, we're offering <strong>50% discount</strong> on all our web development services. Don't miss this opportunity to get a professional website at half the price!</p>
-                        
+                        <p class="text-center">For the next 5 days, we're offering <strong>50% discount</strong> on all
+                            our web development services. Don't miss this opportunity to get a professional website at
+                            half the price!</p>
+
                         <div class="text-center mt-4">
                             <h5>Offer expires in:</h5>
                             <div class="countdown mb-4">
@@ -280,20 +297,26 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="features">
                             <h5 class="text-center mb-3">This offer includes:</h5>
                             <ul class="list-group">
-                                <li class="list-group-item bg-transparent text-white border-light"><i class="bi bi-check-circle-fill text-warning me-2"></i> Responsive Web Design</li>
-                                <li class="list-group-item bg-transparent text-white border-light"><i class="bi bi-check-circle-fill text-warning me-2"></i> SEO Optimization</li>
-                                <li class="list-group-item bg-transparent text-white border-light"><i class="bi bi-check-circle-fill text-warning me-2"></i> 1 Year Free Hosting</li>
-                                <li class="list-group-item bg-transparent text-white border-light"><i class="bi bi-check-circle-fill text-warning me-2"></i> 3 Months Technical Support</li>
+                                <li class="list-group-item bg-transparent text-white border-light"><i
+                                        class="bi bi-check-circle-fill text-warning me-2"></i> Responsive Web Design
+                                </li>
+                                <li class="list-group-item bg-transparent text-white border-light"><i
+                                        class="bi bi-check-circle-fill text-warning me-2"></i> SEO Optimization</li>
+                                <li class="list-group-item bg-transparent text-white border-light"><i
+                                        class="bi bi-check-circle-fill text-warning me-2"></i> 1 Year Free Hosting</li>
+                                <li class="list-group-item bg-transparent text-white border-light"><i
+                                        class="bi bi-check-circle-fill text-warning me-2"></i> 3 Months Technical
+                                    Support</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Single Submit Button -->
             <div class="row mt-3">
                 <div class="col-12 text-center">
@@ -322,23 +345,23 @@
         // Set the countdown date to 5 days from now
         const countdownDate = new Date();
         countdownDate.setDate(countdownDate.getDate() + 5);
-        
+
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = countdownDate - now;
-            
+
             // Calculate days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
+
             // Display the result
             document.getElementById("days").innerText = days;
             document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
             document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
             document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-            
+
             // If the countdown is finished
             if (distance < 0) {
                 clearInterval(countdownInterval);
@@ -346,7 +369,7 @@
                 document.getElementById("hours").innerText = "00";
                 document.getElementById("minutes").innerText = "00";
                 document.getElementById("seconds").innerText = "00";
-                
+
                 // Update the offer text
                 document.querySelector(".offer-title").innerText = "Offer Expired!";
                 document.querySelector(".btn-submit").innerText = "Send Message (Offer Expired)";
@@ -354,11 +377,11 @@
                 document.querySelector(".btn-submit").style.background = "#6c757d";
             }
         }
-        
+
         // Start the countdown timer
         const countdownInterval = setInterval(updateCountdown, 1000);
         updateCountdown(); // Initial call
-        
+
         // Contact form EmailJS
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('contact-form');
@@ -376,22 +399,22 @@
 
                 // Get the offer claim status
                 const claimOffer = document.getElementById('claim-offer').checked;
-                
+
                 // Send email using EmailJS
                 emailjs.sendForm('service_o3j1djn', 'template_1og9rn6', this)
                     .then(() => {
                         // Show success message
                         successMessage.style.display = 'block';
-                        
+
                         // Reset form
                         form.reset();
-                        
+
                         // Reset button after delay
                         setTimeout(() => {
                             btn.disabled = false;
                             btn.innerHTML = originalText;
                             successMessage.style.display = 'none';
-                            
+
                             // Show special message if offer was claimed
                             if (claimOffer) {
                                 alert('Congratulations! Your message has been sent and you have claimed the 50% discount. We will contact you shortly with more details.');
@@ -409,4 +432,5 @@
         });
     </script>
 </body>
+
 </html>

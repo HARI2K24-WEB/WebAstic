@@ -28,13 +28,14 @@ body {
     scroll-behavior: smooth;
     padding-top: 70px;
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Custom Navbar Styles */
 .navbar {
-    
+
     background-color: rgb(247, 247, 247);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
@@ -43,7 +44,7 @@ html {
 }
 
 .navbar.scrolled {
-    background-color:rgb(247, 247, 247);
+    background-color: rgb(247, 247, 247);
     padding: 10px 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
@@ -143,110 +144,115 @@ html {
 
 /* Hero Section */
 .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-            background:
-                linear-gradient(135deg, rgba(58, 134, 255, 0.9), rgba(131, 56, 236, 0.85)),
-                radial-gradient(circle at 20% 80%, rgba(255, 101, 132, 0.5) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(108, 99, 255, 0.5) 0%, transparent 50%),
-                url('https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80') no-repeat center center/cover;
-        }
-        #particles {
-            position: absolute;
-            top: 10%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .hero span {
-            color: #ffffff;
-            font-style: italic;
-    
-        }
-        
-        .hero .lead {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .btn-primary {
-            background-color: #3a86ff;
-            border: none;
-            padding: 12px 30px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(58, 134, 255, 0.5);
-            background-color: #2a76ef;
-        }
-        
-        /* Particle animation */
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) scale(1);
-            }
-            50% {
-                transform: translateY(-8px) scale(1.05);
-            }
-        }
-        
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.8);
-            animation: float 4s infinite ease-in-out;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-        
-        .connection {
-            position: absolute;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #3a86ff, transparent);
-            transform-origin: 0 0;
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .lead {
-                font-size: 1.2rem;
-            }
-        }
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(58, 134, 255, 0.9), rgba(131, 56, 236, 0.85)),
+        radial-gradient(circle at 20% 80%, rgba(255, 101, 132, 0.5) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(108, 99, 255, 0.5) 0%, transparent 50%),
+        url('https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80') no-repeat center center/cover;
+}
+
+#particles {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero span {
+    color: #ffffff;
+    font-style: italic;
+
+}
+
+.hero .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+    background-color: #3a86ff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(58, 134, 255, 0.5);
+    background-color: #2a76ef;
+}
+
+/* Particle animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.05);
+    }
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    animation: float 4s infinite ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.connection {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #3a86ff, transparent);
+    transform-origin: 0 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .lead {
+        font-size: 1.2rem;
+    }
+}
+
 :root {
     --primary-color: #3a86ff;
     --primary-dark: #2667cc;
