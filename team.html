@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" type="image/x-larger" sizes="192x192" href="photos/logo.png">
     <title>WebAstic-Web Solutions</title>
     <link rel="stylesheet" href="style.css">
@@ -19,35 +20,45 @@
     <!--Icon Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
+        :root {
+            --primary: #4361ee;
+            --light-gray: #f8f9fa;
+            --gray: #6c757d;
+        }
+
         /* Team Section */
-       /* Center align the whole team section in the page */
-.section {
-    display: flex;
-    justify-content: center;   /* horizontally center */
-    align-items: center;       /* vertically center */
-    min-height: 100vh;         /* full screen height */
-    text-align: center;        /* center text inside */
-}
+        /* Center align the whole team section in the page */
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            text-align: center;
+            padding: 80px 0;
+        }
 
-/* Optional: limit width for better look */
-.section .container {
-    max-width: 800px;
-}
+        /* Optional: limit width for better look */
+        .section .container {
+            max-width: 800px;
+        }
 
-/* Center each team member */
-.team-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        /* Center each team member */
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.team-member {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
+        .team-member {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
 
         .team-member:hover {
             transform: translateY(-10px);
@@ -61,6 +72,8 @@
             justify-content: center;
             color: var(--gray);
             font-size: 4rem;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         .member-info {
@@ -78,15 +91,57 @@
             font-weight: 500;
         }
 
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+                min-height: auto;
+            }
+            
+            .team-member {
+                padding: 15px;
+                max-width: 280px;
+            }
+            
+            .member-img {
+                height: 150px;
+                font-size: 3rem;
+            }
+            
+            .member-info {
+                padding: 15px 10px;
+            }
+            
+            .member-info h3 {
+                font-size: 1.2rem;
+            }
+        }
 
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title p {
+                font-size: 0.9rem;
+            }
+            
+            .team-member {
+                max-width: 250px;
+            }
+            
+            .member-img {
+                height: 130px;
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
-
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="#home">
@@ -100,49 +155,47 @@
             </button>
 
             <!-- Navbar links -->
-            <ul class="navbar-nav ms-auto">
-    <li class="nav-item">
-        <a class="nav-link" href="index.html#home">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="index.html#about">About</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="index.html#services">Services</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="index.html#contact">Contact</a>
-    </li>
-</ul>
-<a href="index.html#contact" class="btn btn-primary">Build Us</a>
-
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="index.html#contact" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0">Build Us</a>
+            </div>
         </div>
     </nav>
 
-    
     <!-- Team Section -->
-  <section class="section" id="team">
-  <div class="container">
-    <div class="section-title">
-      <h2>Our Team</h2>
-      <p>Meet the talented professionals behind WebAstic-solutions</p>
-    </div>
-    <div class="team-grid">
-      <div class="team-member">
-        <div class="member-img">
-          <i class="fas fa-user"></i>
+    <section class="section" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Team</h2>
+                <p>Meet the talented professionals behind WebAstic-solutions</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>HariPrasanth</h3>
+                        <p>CEO & FOUNDER</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="member-info">
-          <h3>HariPrasanth</h3>
-          <p>CEO & FOUNDER</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-   
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -150,7 +203,9 @@
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <a href="#" class="footer-brand" style="text-decoration: none;">WebAstic</a>
                     <p class="mt-3">We create stunning digital experiences that drive results for your business.</p>
-                   <h5 style="font-style:inherit;">Udyam Reg No:<a href="https://udyamregistration.gov.in/verifyudyambarcode.aspx?verifyudrn=FSPi9jKVU2+Svbadyy+4SzomO6br/TferWNmw26cXcs=" style="text-decoration: none;"> TN-07-0127013 </a></h5>
+                    <h5 style="font-style:inherit;">Udyam Reg No:<a
+                            href="https://udyamregistration.gov.in/verifyudyambarcode.aspx?verifyudrn=FSPi9jKVU2+Svbadyy+4SzomO6br/TferWNmw26cXcs="
+                            style="text-decoration: none;"> TN-07-0127013 </a></h5>
 
                     <div class="social-icons">
                         <a href="https://wa.me/919750034897" class="whatsapp" target="_blank">
@@ -217,25 +272,25 @@
 
     <script>
         // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
             document.querySelector('nav').classList.toggle('active');
         });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
+                if (targetId === '#') return;
+
                 const targetElement = document.querySelector(targetId);
-                if(targetElement) {
+                if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
+
                     // Close mobile menu if open
                     document.querySelector('nav').classList.remove('active');
                 }
@@ -243,9 +298,10 @@
         });
     </script>
 
-     <!-- Bootstrap JS -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
+
 </html>
