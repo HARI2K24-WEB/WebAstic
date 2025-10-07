@@ -43,53 +43,31 @@
         }
 
         /* Center each team member */
-        .team-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+       .team-member {
+  text-align: center;
+  margin: 20px;
+}
 
-        .team-member {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-            width: 100%;
-            max-width: 300px;
-            margin: 0 auto;
-        }
+.member-img img {
+  width: 150px;       /* adjust size as you like */
+  height: 150px;
+  border-radius: 50%; /* makes it round */
+  object-fit: cover;  /* crops the image neatly */
+  border: 3px solid #fff; /* optional border */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* adds a soft shadow */
+}
 
-        .team-member:hover {
-            transform: translateY(-10px);
-        }
+.member-info h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #333;
+}
 
-        .member-img {
-            height: 200px;
-            background-color: var(--light-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray);
-            font-size: 4rem;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
+.member-info p {
+  color: #777;
+  font-size: 14px;
+}
 
-        .member-info {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .member-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-        }
-
-        .member-info p {
-            color: var(--primary);
-            font-weight: 500;
-        }
 
         /* Mobile-specific styles */
         @media (max-width: 768px) {
@@ -183,15 +161,18 @@
                 <p>Meet the talented professionals behind WebAstic-solutions</p>
             </div>
             <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-img">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3>HariPrasanth</h3>
-                        <p>CEO & FOUNDER</p>
-                    </div>
-                </div>
+               <div class="team-grid">
+  <div class="team-member">
+    <div class="member-img">
+      <img src="photos/ceo.jpg" alt="CEO Image">
+    </div>
+    <div class="member-info">
+      <h3>HariPrasanth</h3>
+      <p>CEO & FOUNDER</p>
+    </div>
+  </div>
+</div>
+
             </div>
         </div>
     </section>
