@@ -43,76 +43,124 @@
         }
 
         /* Center each team member */
-       .team-member {
+      /* Team Section */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
   text-align: center;
-  margin: 20px;
+}
+
+.section .container {
+  max-width: 800px;
+  width: 90%;
+}
+
+/* Title */
+.section-title h2 {
+  font-size: 2rem;
+  color: #222;
+}
+
+.section-title p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+/* Team Grid */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Team Member */
+.team-member {
+  text-align: center;
+  margin: 10px;
+  max-width: 220px;
 }
 
 .member-img img {
-  width: 150px;       /* adjust size as you like */
-  height: 150px;
-  border-radius: 50%; /* makes it round */
-  object-fit: cover;  /* crops the image neatly */
-  border: 3px solid #fff; /* optional border */
-  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* adds a soft shadow */
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .member-info h3 {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 18px;
   color: #333;
 }
 
 .member-info p {
   color: #777;
-  font-size: 14px;
+  font-size: 13px;
 }
 
+/* Tablet View */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
 
-        /* Mobile-specific styles */
-        @media (max-width: 768px) {
-            .section {
-                padding: 60px 0;
-                min-height: auto;
-            }
-            
-            .team-member {
-                padding: 15px;
-                max-width: 280px;
-            }
-            
-            .member-img {
-                height: 150px;
-                font-size: 3rem;
-            }
-            
-            .member-info {
-                padding: 15px 10px;
-            }
-            
-            .member-info h3 {
-                font-size: 1.2rem;
-            }
-        }
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
 
-        @media (max-width: 576px) {
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-            
-            .section-title p {
-                font-size: 0.9rem;
-            }
-            
-            .team-member {
-                max-width: 250px;
-            }
-            
-            .member-img {
-                height: 130px;
-                font-size: 2.5rem;
-            }
-        }
+  .section-title p {
+    font-size: 0.95rem;
+  }
+
+  .team-grid {
+    gap: 15px;
+  }
+
+  .member-img img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 576px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .section-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-title p {
+    font-size: 0.85rem;
+  }
+
+  .team-member {
+    margin: 8px;
+    max-width: 160px;
+  }
+
+  .member-img img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .member-info h3 {
+    font-size: 1rem;
+  }
+
+  .member-info p {
+    font-size: 0.8rem;
+  }
+}
+
     </style>
 </head>
 
@@ -153,25 +201,27 @@
         </div>
     </nav>
 
-    <!-- Team Section -->
-    <section class="section" id="team">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Team</h2>
-                <p>Meet the talented professionals behind WebAstic-solutions</p>
-            </div>
-            <div class="team-grid">
-               <div class="team-grid">
-  <div class="team-member">
-    <div class="member-img">
-      <img src="photos/ceo.jpg" alt="CEO Image">
+   <!-- Team Section -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Team</h2>
+      <p>Meet the talented professionals behind WebAstic Solutions</p>
     </div>
-    <div class="member-info">
-      <h3>HariPrasanth</h3>
-      <p>CEO & FOUNDER</p>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="member-img">
+          <img src="photos/ceo.jpg" alt="CEO Image">
+        </div>
+        <div class="member-info">
+          <h3>HariPrasanth</h3>
+          <p>CEO & FOUNDER</p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
             </div>
         </div>
