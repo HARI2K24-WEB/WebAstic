@@ -1,12 +1,13 @@
-
-// =======================
-// 1️⃣ Navbar Scroll Effect
-// =======================
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
+window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
 });
+
+
 
 // =======================
 // 2️⃣ Smooth Scrolling & Active Nav Link
