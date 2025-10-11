@@ -131,56 +131,60 @@ html {
     color: var(--primary-color);
   }
 }
-
-/* Hero Section - Adjusted Height */
+/* Hero Section */
 .hero {
-    margin-top: -70px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-    background:
-        linear-gradient(135deg, rgba(58, 134, 255, 0.9), rgba(131, 56, 236, 0.85)),
-        radial-gradient(circle at 20% 80%, rgba(255, 101, 132, 0.5) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(108, 99, 255, 0.5) 0%, transparent 50%),
-        url('https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80') no-repeat center center/cover;
+  position: relative;
+  margin-top: -70px;
+  height: 100vh;                 /* Full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;              /* Hide overflow of particles */
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
 }
 
+/* Particles container (canvas) */
 #particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;                   /* Behind hero content */
 }
 
+/* Hero content */
 .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 800px;
-    padding: 0 20px;
+  position: relative;
+  z-index: 2;                   /* Above particles */
 }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+/* Heading */
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
 }
 
-.hero span {
-    color: #ffffff;
-    font-style: italic;
+/* Paragraph */
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
-.hero .lead {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+/* Button */
+.hero-content .btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
 }
+
+.hero-content .btn:hover {
+  background-color: #ff4d94;
+  color: white;
+}
+
 
 /* About Section - Adjusted Height */
 .about {

@@ -62,180 +62,46 @@ window.addEventListener('scroll', () => {
 // =======================
 // 5️⃣ Animate On hero section
 // =======================
-document.addEventListener('DOMContentLoaded', function () {
-    const particlesContainer = document.getElementById('particles');
-    const particles = [];
-    const connections = [];
-    const particleCount = 60;
-    const connectionDistance = 150;
-    let animationId;
-
-    // Initialize particles
-    initParticles();
-
-    // Handle window resize
-    window.addEventListener('resize', function () {
-        // Cancel current animation
-        cancelAnimationFrame(animationId);
-
-        // Remove all particles and connections
-        particlesContainer.innerHTML = '';
-        particles.length = 0;
-        connections.length = 0;
-
-        // Reinitialize particles
-        initParticles();
-    });
-
-    function initParticles() {
-        // Create particles
-        for (let i = 0; i < particleCount; i++) {
-            createParticle();
-        }
-
-        // Create connections between nearby particles
-        createConnections();
-
-        // Start animation
-        animate();
+/* Initialize particles.js */
+particlesJS("particles", {
+  "particles": {
+    "number": { 
+      "value": 80,            // Total number of particles
+      "density": { "enable": true, "value_area": 800 } // Density of particles in area
+    },
+    "color": { "value": "#ffffff" }, // Particle color
+    "shape": { "type": "circle" },   // Particle shape
+    "opacity": { "value": 0.5, "random": true }, // Particle opacity
+    "size": { "value": 3, "random": true },      // Particle size
+    "line_linked": { 
+      "enable": true,         // Connect particles with lines
+      "distance": 150,        // Maximum distance to link
+      "color": "#ffffff",     // Line color
+      "opacity": 0.7,         // Line opacity (increased for thicker look)
+      "width": 2              // Line thickness (you asked to increase)
+    },
+    "move": { 
+      "enable": true,         // Enable particle movement
+      "speed": 3,             // Speed of movement
+      "direction": "none",    // Move in random direction
+      "random": true,
+      "straight": false,
+      "out_mode": "out",      // Particles disappear out of the canvas
+      "bounce": false
     }
-
-    function createParticle() {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-
-        // Random size between 2px and 4px
-        const size = Math.random() * 2 + 2;
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-
-        // Random position within the container
-        const x = Math.random() * window.innerWidth;
-        const y = Math.random() * window.innerHeight;
-        particle.style.left = `${x}px`;
-        particle.style.top = `${y}px`;
-
-        // Random animation delay and duration
-        const delay = Math.random() * 5;
-        const duration = 3 + Math.random() * 3;
-        particle.style.animationDelay = `${delay}s`;
-        particle.style.animationDuration = `${duration}s`;
-
-        particlesContainer.appendChild(particle);
-
-        // Store particle data
-        particles.push({
-            element: particle,
-            x: x,
-            y: y,
-            vx: (Math.random() - 0.5) * 0.3,
-            vy: (Math.random() - 0.5) * 0.3,
-            size: size
-        });
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": { "enable": true, "mode": "grab" }, // Hover effect: lines follow cursor
+      "onclick": { "enable": true, "mode": "push" }  // Click effect: add more particles
+    },
+    "modes": {
+      "grab": { "distance": 200, "line_linked": { "opacity": 0.6 } },
+      "push": { "particles_nb": 4 }
     }
-
-    function createConnections() {
-        // Clear existing connections
-        connections.forEach(conn => {
-            if (conn.element.parentNode) {
-                conn.element.parentNode.removeChild(conn.element);
-            }
-        });
-        connections.length = 0;
-
-        // Create new connections
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < connectionDistance) {
-                    const connection = document.createElement('div');
-                    connection.classList.add('connection');
-
-                    // Position and rotate the connection line
-                    const angle = Math.atan2(dy, dx) * 180 / Math.PI;
-                    connection.style.width = `${distance}px`;
-                    connection.style.left = `${particles[i].x}px`;
-                    connection.style.top = `${particles[i].y}px`;
-                    connection.style.transform = `rotate(${angle}deg)`;
-
-                    // Set opacity based on distance (closer = more opaque)
-                    const opacity = 0.7 - (distance / connectionDistance) * 0.7;
-                    connection.style.opacity = opacity;
-
-                    particlesContainer.appendChild(connection);
-                    connections.push({
-                        element: connection,
-                        particle1: particles[i],
-                        particle2: particles[j]
-                    });
-                }
-            }
-        }
-    }
-
-    function animate() {
-        // Update particle positions
-        particles.forEach(particle => {
-            // Move particle
-            particle.x += particle.vx;
-            particle.y += particle.vy;
-
-            // Bounce off edges with slight randomness
-            if (particle.x < 0) {
-                particle.x = 0;
-                particle.vx = Math.abs(particle.vx) * (0.9 + Math.random() * 0.2);
-            } else if (particle.x > window.innerWidth) {
-                particle.x = window.innerWidth;
-                particle.vx = -Math.abs(particle.vx) * (0.9 + Math.random() * 0.2);
-            }
-
-            if (particle.y < 0) {
-                particle.y = 0;
-                particle.vy = Math.abs(particle.vy) * (0.9 + Math.random() * 0.2);
-            } else if (particle.y > window.innerHeight) {
-                particle.y = window.innerHeight;
-                particle.vy = -Math.abs(particle.vy) * (0.9 + Math.random() * 0.2);
-            }
-
-            // Update element position
-            particle.element.style.left = `${particle.x}px`;
-            particle.element.style.top = `${particle.y}px`;
-        });
-
-        // Update connections
-        connections.forEach(connection => {
-            const dx = connection.particle1.x - connection.particle2.x;
-            const dy = connection.particle1.y - connection.particle2.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < connectionDistance) {
-                // Update connection position and rotation
-                const angle = Math.atan2(dy, dx) * 180 / Math.PI;
-                connection.element.style.width = `${distance}px`;
-                connection.element.style.left = `${connection.particle1.x}px`;
-                connection.element.style.top = `${connection.particle1.y}px`;
-                connection.element.style.transform = `rotate(${angle}deg)`;
-
-                // Update opacity based on distance
-                const opacity = 0.7 - (distance / connectionDistance) * 0.7;
-                connection.element.style.opacity = opacity;
-                connection.element.style.display = 'block';
-            } else {
-                connection.element.style.display = 'none';
-            }
-        });
-
-        // Occasionally recreate connections to handle particles moving apart
-        if (Math.random() < 0.01) { // 1% chance each frame
-            createConnections();
-        }
-
-        // Continue animation
-        animationId = requestAnimationFrame(animate);
-    }
+  },
+  "retina_detect": true
 });
 // =======================
 // 5️⃣ Animate On Scroll
