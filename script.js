@@ -1,4 +1,4 @@
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
     if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
@@ -7,6 +7,13 @@ window.addEventListener("scroll", function() {
     }
 });
 
+document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetID = link.getAttribute('href');
+        gsap.to(window, { duration: 1, scrollTo: targetID, ease: "power2.inOut" });
+    });
+});
 
 
 // =======================
