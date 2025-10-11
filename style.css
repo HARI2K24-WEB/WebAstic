@@ -45,12 +45,10 @@ html {
   padding: 8px 25px;
   z-index: 1000;
 }
-
 .navbar.scrolled {
   background: rgb(247, 247, 247);
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
 }
-
 .navbar-brand img {
   height: 40px;
   transition: transform 0.3s ease;
