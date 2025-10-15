@@ -70,7 +70,7 @@ particlesJS("particles", {
       "density": { "enable": true, "value_area": 800 } // Density of particles in area
     },
     "color": { "value": "#ffffff" }, // Particle color
-    "shape": { "type": "circle" },   // Particle shape
+    "shape": { "type": "triangle" },   // Particle shape
     "opacity": { "value": 0.5, "random": true }, // Particle opacity
     "size": { "value": 3, "random": true },      // Particle size
     "line_linked": { 
@@ -78,11 +78,11 @@ particlesJS("particles", {
       "distance": 150,        // Maximum distance to link
       "color": "#ffffff",     // Line color
       "opacity": 0.7,         // Line opacity (increased for thicker look)
-      "width": 2              // Line thickness (you asked to increase)
+      "width": 1.5              // Line thickness (you asked to increase)
     },
     "move": { 
       "enable": true,         // Enable particle movement
-      "speed": 3,             // Speed of movement
+      "speed": 5,             // Speed of movement
       "direction": "none",    // Move in random direction
       "random": true,
       "straight": false,
@@ -93,7 +93,7 @@ particlesJS("particles", {
   "interactivity": {
     "detect_on": "canvas",
     "events": {
-      "onhover": { "enable": true, "mode": "grab" }, // Hover effect: lines follow cursor
+      "onhover": { "enable": false, "mode": "grab" }, // Hover effect: lines follow cursor
       "onclick": { "enable": true, "mode": "push" }  // Click effect: add more particles
     },
     "modes": {
