@@ -81,53 +81,6 @@ html {
   box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3);
 }
 
-/* Hide bottom nav on desktop */
-.navbar-bottom {
-  display: none;
-}
-
-/* ✅ Mobile Bottom Navbar (fixed + visible) */
-@media (max-width: 992px) {
-  .navbar {
-    display: none !important;
-  }
-
-  .navbar-bottom {
-    display: flex !important;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid #ddd;
-    padding: 10px 0;
-    z-index: 2000; /* higher to appear above all */
-  }
-
-  .navbar-bottom a {
-    color: #333;
-    text-decoration: none;
-    text-align: center;
-    flex: 1;
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .navbar-bottom a i {
-    font-size: 22px;
-  }
-
-  .navbar-bottom a.active,
-  .navbar-bottom a:hover {
-    color: var(--primary-color);
-  }
-}
 /* Hero Section */
 .hero {
   position: relative;
@@ -1057,91 +1010,124 @@ a:hover {
         padding: 25px 20px;
     }
 }
- /* Products Section */
+ /* ✅ Refactored Products Section */
+#products {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    justify-items: center;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    /* Using your --shadow variable or a custom one for depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 40px 30px; /* Increased padding for better breathing room */
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ✅ Hover Animation: Lift + Shadow Glow */
+.product-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(58, 134, 255, 0.15);
+    border-color: var(--primary-light);
+}
+
+.product-img {
+    margin-bottom: 25px;
+    color: var(--primary-color); /* Fixed variable name */
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.1);
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.product-card p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.price {
+    font-weight: 800;
+    color: var(--secondary-color); /* Purple for pricing stands out */
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    display: block;
+}
+
+/* ✅ Improved Buy Button */
+.buy-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px; /* Rounded pill style to match Build Us button */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 5px 15px rgba(58, 134, 255, 0.4);
+    transform: scale(1.02);
+}
+
+/* ✅ Responsive Adjustments */
+
+/* Tablet View */
+@media (max-width: 992px) {
     .products-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-top: 40px;
-      justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 576px) {
+    #products {
+        padding: 60px 0 100px; /* Extra bottom padding so mobile nav doesn't cover content */
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
     }
 
     .product-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-      max-width: 300px;
-      width: 100%;
-      transition: transform 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .product-img {
-      margin-bottom: 15px;
-      color: var(--primary);
+        max-width: 100%;
+        padding: 30px 20px; /* Slightly tighter padding for small screens */
     }
 
     .product-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #333;
+        font-size: 1.25rem;
     }
-
-    .product-card p {
-      margin-bottom: 15px;
-      color: #666;
-    }
-
-    .price {
-      font-weight: bold;
-      color: var(--primary);
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .buy-btn {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-      font-size: 1rem;
-    }
-
-    .buy-btn:hover {
-      background: #3651c7;
-    }
-
-    /* Tablet View for Products */
-    @media (max-width: 768px) {
-      .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      .product-card {
-        max-width: none;
-      }
-    }
-
-    /* Mobile View for Products */
-    @media (max-width: 576px) {
-      .products-grid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-      }
-
-      .product-card {
-        max-width: none;
-      }
-    }
+}
 /* Contact Section */
 
 .contact {
